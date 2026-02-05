@@ -1,0 +1,107 @@
+### Read all users
+GET  http://localhost:4000/user-api/users
+
+### Read user by objectId
+GET  http://localhost:4000/user-api/users/697dc21f72a40071ed2b110d
+
+
+
+### Create users
+POST  http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "username": "Vishnu",
+    "password": "Vishnu123",
+    "age": 21
+}
+
+
+### Update users
+PUT  http://localhost:4000/user-api/users/697dc21f72a40071ed2b110d
+Content-Type: application/json
+
+{
+    "username": "manasa",
+    "password": "manasa",
+    "age": 23
+}
+
+### Delete users
+DELETE  http://localhost:4000/user-api/users/697dc21f72a40071ed2b110d
+
+
+
+
+#### User authentication (Login) request
+POST http://localhost:4000/user-api/auth
+Content-Type: application/json
+
+{
+    "username":"Vishnu",
+    "password":"Vishnu123"
+}
+
+
+
+
+### Req for protected route
+GET http://localhost:4000/user-api/test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Read all the Products
+GET  http://localhost:4000/product-api/products
+
+
+
+### Read the Products by objectId 
+GET http://localhost:4000/product-api/products/:id
+
+
+
+### Create Products 
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "productname":"Laptop",
+    "price":51000,
+    "brand":"Acer"
+}
+
+
+### Update Products 
+PUT http://localhost:4000/product-api/products/697f2b0d166e7ad168982cb0
+Content-Type: application/json
+
+{
+    "productname":"Laptop",
+    "price":52000,
+    "brand":"Dell"
+}
+
+### Delete Products
+DELETE http://localhost:4000/product-api/products/:id

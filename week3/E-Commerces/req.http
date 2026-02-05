@@ -1,0 +1,31 @@
+###Create product req
+POST http://localhost:4000/product-api/products
+Content-Type: application/json
+
+{
+    "ProductName":"laptop",
+    "price":50000,
+    "brand":"Acer"
+}
+
+
+###Create User req
+POST http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name":"vishnu",
+    "email":"vishnu@gmail.com",
+    "password":"vishnu123",
+    "cart":[]
+}
+
+
+###Req to add product to cart
+### Replace <userid> and <productid> with actual MongoDB IDs from created products/users
+PUT http://localhost:4000/user-api/user-cart/user-id/6981935d36d841dd93d93467/product-id/6981867a7ac60709292f4c3d
+
+
+
+###Read user by id
+GET http://localhost:4000/user-api/users/6980750c62e01edf0b242ab0
